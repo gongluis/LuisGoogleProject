@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="vm"
+            type="com.luis.luisgoogleproject.request.RequestCollectViewModel" />
+        <variable
+            name="click"
+            type="com.luis.luisgoogleproject.ui.fragment.ContactFragment.ProxyClick" />
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.fragment.ContactFragment">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingActionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|left"
+            android:layout_marginBottom="68dp"
+            android:layout_marginLeft="30dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:srcCompat="@drawable/ic_add_white_24dp"
+            tools:ignore="VectorDrawableCompat"
+            android:onClick="@{()->click.insertData()}"
+            />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_marginBottom="68dp"
+            android:layout_marginRight="30dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:srcCompat="@drawable/ic_cancel_black_24dp"
+            tools:ignore="VectorDrawableCompat"
+            android:onClick="@{()->click.clearData()}"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>
