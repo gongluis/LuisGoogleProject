@@ -1,5 +1,7 @@
 package com.luis.luisgoogleproject;
 
+import android.util.Log;
+
 import androidx.databinding.DataBindingUtil;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
@@ -10,6 +12,12 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.luis.luisgoogleproject.base.BaseActivity;
 import com.luis.luisgoogleproject.change.MainActivityViewModel;
 import com.luis.luisgoogleproject.databinding.ActivityMainBinding;
+
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Hashtable;
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 public class MainActivity extends BaseActivity {
 
@@ -37,6 +45,16 @@ public class MainActivity extends BaseActivity {
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(navView, navController);
 
-    }
 
+        //jni 测试
+        // 创建JNI实例，并调用本地声明的方法
+        String result = new JNI().sayHello();
+        System.out.println(result);
+        // 打印JNI本地方法返回的字符串。
+        Log.d("TAG", "the string from JNC C '"+result + "'");
+        //c-s  syn(sequence=x)       s-c   ack(sequence x+1) synchronous(sequencey)  c-s ack(sequence y+1)  estanblish
+
+        //1.
+
+    }
 }

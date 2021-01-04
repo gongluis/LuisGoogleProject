@@ -23,6 +23,7 @@ public class Student {
     @ColumnInfo(name = "age")
     private int age;
 
+
     public Student(String name, int age) {
         this.name = name;
         this.age = age;

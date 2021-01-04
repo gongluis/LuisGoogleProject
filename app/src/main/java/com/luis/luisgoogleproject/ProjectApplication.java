@@ -8,6 +8,14 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.lifecycle.ViewModelStore;
 import androidx.lifecycle.ViewModelStoreOwner;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.HashSet;
+
 /**
  * author : luis
  * e-mail : luis.gong@cardinfolink.com
@@ -25,7 +33,6 @@ public class ProjectApplication extends Application implements ViewModelStoreOwn
 
         // 实例化 ViewModelStore
         mAppViewModelStore = new ViewModelStore();
-
     }
 
     @NonNull
@@ -71,5 +78,45 @@ public class ProjectApplication extends Application implements ViewModelStoreOwn
         return application;
     }
 
+
+    public static HashSet<String> getSoList(int pid, String pkg)
+    {
+        HashSet<String> temp = new HashSet<String>();
+        File file = new File("/proc/" + pid + "/maps");
+        if (!file.exists())
+        {
+            return temp;
+        }
+        try
+        {
+            BufferedReader bufferedReader = new BufferedReader(
+                    new InputStreamReader(new FileInputStream(file)));
+            String lineString = null;
+            while ((lineString = bufferedReader.readLine()) != null)
+            {
+                String tempString = lineString.trim();
+                if (tempString.contains("/data/data")
+                        && !tempString.contains("/data/data/" + pkg))
+                {
+                    int index = tempString.indexOf("/data/data");
+                    temp.add(tempString.substring(index));
+                }
+            }
+            bufferedReader.close();
+        }
+        catch (FileNotFoundException e)
+        {
+            //TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        catch (IOException e)
+        {
+            //TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        return temp;
+    }
+    //卸载加载的so库
+    public static native void uninstall(String soPath);
 
 }
