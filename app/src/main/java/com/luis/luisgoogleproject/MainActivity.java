@@ -7,6 +7,7 @@ import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
+import androidx.work.WorkManager;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.luis.luisgoogleproject.base.BaseActivity;
@@ -54,7 +55,11 @@ public class MainActivity extends BaseActivity {
         Log.d("TAG", "the string from JNC C '"+result + "'");
         //c-s  syn(sequence=x)       s-c   ack(sequence x+1) synchronous(sequencey)  c-s ack(sequence y+1)  estanblish
 
-        //1.
+
+//        WorkManager.getInstance(getApplicationContext())
+//        .beginWith(Arrays.asList(workA, workB))
+//                .then(workC)
+//                .enqueue();
 
     }
 }
