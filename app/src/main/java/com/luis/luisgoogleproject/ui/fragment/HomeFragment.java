@@ -44,8 +44,8 @@ public class HomeFragment extends BaseFragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        homeViewModel = new ViewModelProvider(this).get(HomeViewModel.class);
-        requestHomeViewModel = new ViewModelProvider(this).get(RequestHomeViewModel.class);
+        homeViewModel = new ViewModelProvider(this).get(HomeViewModel.class);//负责控制布局展示ui
+        requestHomeViewModel = new ViewModelProvider(this).get(RequestHomeViewModel.class);//负责获取数据viewModel
         View root = inflater.inflate(R.layout.fragment_home, container, false);
         showActionBar();
         mBinding = FragmentHomeBinding.bind(root);

@@ -10,6 +10,7 @@ import androidx.navigation.ui.NavigationUI;
 import androidx.work.WorkManager;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.luis.glog.GLog;
 import com.luis.luisgoogleproject.base.BaseActivity;
 import com.luis.luisgoogleproject.change.MainActivityViewModel;
 import com.luis.luisgoogleproject.databinding.ActivityMainBinding;
@@ -49,10 +50,10 @@ public class MainActivity extends BaseActivity {
 
         //jni 测试
         // 创建JNI实例，并调用本地声明的方法
-        String result = new JNI().sayHello();
-        System.out.println(result);
+//        String result = new JNI().sayHello();
+//        System.out.println(result);
         // 打印JNI本地方法返回的字符串。
-        Log.d("TAG", "the string from JNC C '"+result + "'");
+//        Log.d("TAG", "the string from JNC C '"+result + "'");
         //c-s  syn(sequence=x)       s-c   ack(sequence x+1) synchronous(sequencey)  c-s ack(sequence y+1)  estanblish
 
 
@@ -60,6 +61,7 @@ public class MainActivity extends BaseActivity {
 //        .beginWith(Arrays.asList(workA, workB))
 //                .then(workC)
 //                .enqueue();
+        GLog.i(getApplicationContext(),"巩贺", "MainActivity", "我是测试日志哈哈哈哈！！！");
 
     }
 }

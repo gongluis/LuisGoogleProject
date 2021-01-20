@@ -1,3 +1,4 @@
+include ':GLog'
 include ':common_utils'
 include ':app'
 rootProject.name = "LuisGoogleProject"

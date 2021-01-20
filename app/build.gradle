@@ -78,6 +78,7 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
     implementation project(":common_utils")
+    implementation project(":GLog")
 
     implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
     compileOnly 'androidx.lifecycle:lifecycle-runtime:2.2.0'
@@ -95,5 +96,5 @@ dependencies {
     implementation 'androidx.room:room-runtime:2.2.5'
     annotationProcessor 'androidx.room:room-compiler:2.2.5'
 
-    compile 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:+'
+    implementation 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:+'
 }

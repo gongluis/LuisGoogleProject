@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--交给databinding管理-->
 <layout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
@@ -9,6 +10,7 @@
             name="vm"
             type="com.luis.luisgoogleproject.change.HomeViewModel" />
 
+        <!--跟内部类建立绑定关系-->
         <variable
             name="click"
             type="com.luis.luisgoogleproject.ui.fragment.HomeFragment.ProxyClick" />
