@@ -7,4 +7,14 @@
 
     <!-- 默认的字体大小 -->
     <dimen name="default_text_size">12sp</dimen>
+
+    <dimen name="edge_1">1dp</dimen>
+    <dimen name="edge_8">8dp</dimen>
+    <dimen name="edge_16">16dp</dimen>
+    <dimen name="edge_17">17dp</dimen>
+    <dimen name="edge_18">18dp</dimen>
+    <dimen name="edge_24">24dp</dimen>
+    <dimen name="edge_25">25dp</dimen>
+    <dimen name="edge_30">30dp</dimen>
+    <dimen name="edge_174">174dp</dimen>
 </resources>

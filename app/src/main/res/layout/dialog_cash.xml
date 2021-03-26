@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingHorizontal="@dimen/edge_25"
+    android:paddingVertical="@dimen/edge_24">
+
+
+    <TextView
+        android:id="@+id/cash_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/edge_16"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="@dimen/edge_25"
+        />
+
+    <ImageView
+        android:id="@+id/cash_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/cash_x"
+        app:layout_constraintTop_toTopOf="@+id/cash_title"
+        app:layout_constraintLeft_toRightOf="@+id/cash_title"
+        android:layout_marginLeft="@dimen/edge_174"
+        />
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/edge_1"
+        android:background="@color/color_979797"
+        app:layout_constraintTop_toBottomOf="@+id/cash_back"
+        android:layout_marginTop="@dimen/edge_17"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <ImageView
+        android:id="@+id/cash_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/line"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/edge_25"
+        />
+
+    <TextView
+        android:id="@+id/cash_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/edge_16"
+        android:maxLines="1"
+        android:textColor="@color/color_2b2b2b"
+        app:layout_constraintTop_toBottomOf="@+id/cash_img"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/edge_18"
+        />
+
+    <Button
+        android:id="@+id/cash_confirm"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/edge_18"
+        android:background="@drawable/blue_selector"
+        android:textSize="@dimen/edge_16"
+        android:textColor="@color/white"
+        android:layout_marginTop="@dimen/edge_30"
+        app:layout_constraintTop_toBottomOf="@+id/cash_msg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="确定"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

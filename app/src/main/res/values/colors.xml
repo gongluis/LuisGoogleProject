@@ -36,4 +36,10 @@
 
     <!-- 无色 -->
     <color name="no_color">#00000000</color>
+
+    <color name="button_pressed">#00afc5</color>
+    <color name="button_default">#00bbd3</color>
+
+    <color name="color_2b2b2b">#2b2b2b</color>
+    <color name="color_979797">#979797</color>
 </resources>

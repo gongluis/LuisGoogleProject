@@ -27,6 +27,14 @@ android {
                 arguments = ["room.schemaLocation": "$projectDir/schemas".toString()]//指定数据库schema导出的位置
             }
         }
+
+//        vectorDrawables.generatedDensities = ['hdpi','xxhdpi']//低版本的build 命令是generatedDensities 不推荐
+        vectorDrawables.useSupportLibrary = true//不会转成png  引用src->srcCompat 推荐
+
+        resConfigs 'zh'
+        ndk{
+            abiFilters "armeabi-v7a"
+        }
     }
     // 配置CMakeLists.txt路径，相对于当前文件
     externalNativeBuild {
@@ -43,7 +51,10 @@ android {
 
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
+            shrinkResources true
+            zipAlignEnabled true
+
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
