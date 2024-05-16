@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
+import android.widget.Toast;
 
 import com.luis.luisgoogleproject.base.BaseActivity;
 import com.luis.luisgoogleproject.data.config.AppConfigs;
@@ -32,5 +33,6 @@ public class DetailLinkActivity extends BaseActivity {
         // 3.利用WebView直接加载网页链接
         // 每次启动这个activity 所加载的url网页路径肯定是不一样的 ， Intent传值
         mWebView.loadUrl(mUrl);
+
     }
 }

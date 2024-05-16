@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.CustomViewActivity">
+
+    <com.xuexiang.xui.widget.actionbar.TitleBar
+        android:id="@+id/base_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tb_actionPadding="20dp"
+        app:tb_actionTextColor="@color/black"
+        app:tb_barHeight="38dp"
+        app:tb_leftImageResource="@mipmap/icon_arrow_left"
+        app:tb_sideTextPadding="20dp"
+        app:tb_titleText="自定义view"
+        app:tb_titleTextColor="@color/black"
+        app:tb_titleTextSize="17sp" />
+
+    <com.luis.luisgoogleproject.ui.view.TitleMenu
+        android:id="@+id/ddm_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/base_title_bar" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

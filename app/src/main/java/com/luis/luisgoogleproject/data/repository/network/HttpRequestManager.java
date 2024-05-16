@@ -43,9 +43,11 @@ public class HttpRequestManager implements IRemoteRequest{
                     String resultData = result.body().string();
 
                     //使用gson解析
-                    Gson gson =  new Gson();
-                    HomeDataResult homeDataResult = gson.fromJson(resultData, HomeDataResult.class);
-                    homeDataResultLiveData.postValue(homeDataResult);//异步，setValeu非异步
+                    if(result!=null){
+//                    Gson gson =  new Gson();
+//                    HomeDataResult homeDataResult = gson.fromJson(resultData, HomeDataResult.class);
+//                    homeDataResultLiveData.postValue(homeDataResult);//异步，setValeu非异步
+                    }
                 } catch (IOException e) {
                     e.printStackTrace();
                 }

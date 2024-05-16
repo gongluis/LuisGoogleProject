@@ -18,6 +18,7 @@
     <color name="root_bg_color">#efeded</color>
 
     <color name="white">#FFFFFF</color>
+    <color name="white90">#E6FFFFFF</color>
 
     <!-- 线条的背景灰色 -->
     <color name="gray">#F4F4F4</color>
@@ -42,4 +43,19 @@
 
     <color name="color_2b2b2b">#2b2b2b</color>
     <color name="color_979797">#979797</color>
+
+    <!-- 按钮按压时的颜色 -->
+    <color name="common_button_pressed_color">#AA5A8DDF</color>
+    <!-- 按钮禁用时的颜色 -->
+    <color name="common_button_disable_color">#BBBBBB</color>
+
+    <color name="common_accent_color">#5A8DDF</color>
+
+    <color name="c_212121">#FF212121</color>
+    <color name="text_c_79">#FF797979</color>
+    <color name="colorStroke">#DFDFDF</color>
+
+    <color name="text_black111">#FF111111</color>
+    <color name="c_33">#FF333333</color>
+    <color name="f_2">#FFF2F2F2</color>
 </resources>

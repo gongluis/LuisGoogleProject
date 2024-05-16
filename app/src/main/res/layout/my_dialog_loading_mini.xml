@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.xuexiang.xui.widget.layout.XUILinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/dialog_view"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/text_black111"
+    android:gravity="center"
+    android:orientation="vertical"
+    app:xui_radius="6dp">
+
+    <com.xuexiang.xui.widget.progress.loading.MiniLoadingView
+        android:id="@+id/mini_loading_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="50dp"
+        app:mlv_loading_view_color="@color/xui_config_color_white"
+        app:mlv_loading_view_size="35dp" />
+
+    <TextView
+        android:id="@+id/tv_tip_message"
+        style="@style/TextStyle.Explain"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="25dp"
+        android:text="@string/xui_tip_loading_message"
+        android:textColor="@color/xui_config_color_white"
+        android:textSize="16sp" />
+
+</com.xuexiang.xui.widget.layout.XUILinearLayout>

@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_white_radius6"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_pig_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="26dp"
+        android:text="母猪类型"
+        android:textColor="@color/c_212121"
+        android:textSize="17sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/rg_pig_state"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/tv_pig_state">
+
+        <RadioButton
+            android:id="@+id/rb_pig_state_one"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_weight="1"
+            android:background="@drawable/selector_blue_cus"
+            android:button="@null"
+            android:gravity="center"
+            android:paddingVertical="11dp"
+            android:text="自有"
+            android:textColor="@drawable/selector_by_delivery_state"
+            android:textSize="13sp" />
+
+        <RadioButton
+            android:id="@+id/rb_pig_state_two"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_weight="1"
+            android:background="@drawable/selector_blue_cus"
+            android:button="@null"
+            android:gravity="center"
+            android:paddingVertical="11dp"
+            android:text="内购"
+            android:textColor="@drawable/selector_by_delivery_state"
+            android:textSize="13sp" />
+
+        <RadioButton
+            android:id="@+id/rb_pig_state_three"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="15dp"
+            android:layout_weight="1"
+            android:background="@drawable/selector_blue_cus"
+            android:button="@null"
+            android:gravity="center"
+            android:paddingVertical="11dp"
+            android:text="外购"
+            android:textColor="@drawable/selector_by_delivery_state"
+            android:textSize="13sp" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tv_filter_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="26dp"
+        android:text="状态"
+        android:textColor="@color/c_212121"
+        android:textSize="17sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rg_pig_state" />
+
+    <RadioGroup
+        android:id="@+id/rg_filter_state"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/tv_filter_state">
+
+        <RadioButton
+            android:id="@+id/rb_filter_state_one"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_weight="1"
+            android:background="@drawable/selector_blue_cus"
+            android:button="@null"
+            android:gravity="center"
+            android:paddingVertical="11dp"
+            android:text="正常"
+            android:textColor="@drawable/selector_by_delivery_state"
+            android:textSize="13sp" />
+
+        <RadioButton
+            android:id="@+id/rb_filter_state_two"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="15dp"
+            android:layout_weight="1"
+            android:background="@drawable/selector_blue_cus"
+            android:button="@null"
+            android:gravity="center"
+            android:paddingVertical="11dp"
+            android:text="关闭"
+            android:textColor="@drawable/selector_by_delivery_state"
+            android:textSize="13sp" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tv_filter_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="26dp"
+        android:text="类型"
+        android:textColor="@color/c_212121"
+        android:textSize="17sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rg_filter_state" />
+
+    <RadioGroup
+        android:id="@+id/rg_filter_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/tv_filter_type">
+
+        <RadioButton
+            android:id="@+id/rb_filter_type_one"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_weight="1"
+            android:background="@drawable/selector_blue_cus"
+            android:button="@null"
+            android:gravity="center"
+            android:paddingVertical="11dp"
+            android:text="妊娠批"
+            android:textColor="@drawable/selector_by_delivery_state"
+            android:textSize="13sp" />
+
+        <RadioButton
+            android:id="@+id/rb_filter_type_two"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="15dp"
+            android:layout_weight="1"
+            android:background="@drawable/selector_blue_cus"
+            android:button="@null"
+            android:gravity="center"
+            android:paddingVertical="11dp"
+            android:text="空怀批"
+            android:textColor="@drawable/selector_by_delivery_state"
+            android:textSize="13sp" />
+
+    </RadioGroup>
+
+    <View
+        android:id="@+id/vw_bottom_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/colorStroke"
+        app:layout_constraintTop_toBottomOf="@+id/rg_filter_type" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_reset"
+        android:layout_width="110dp"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="重置"
+        android:textColor="#111111"
+        android:textSize="17sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vw_bottom_line" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_confirm"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="#2196F3"
+        android:gravity="center"
+        android:text="确定"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_reset"
+        app:layout_constraintTop_toBottomOf="@+id/vw_bottom_line" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
